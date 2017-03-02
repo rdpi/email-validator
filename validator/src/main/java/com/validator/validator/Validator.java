@@ -12,11 +12,11 @@ public class Validator{
 			++rules;
 		}
 		//New rules: 1)String must be of form something@something.something
-		if (email.matches("^*@*.*$")){
+		if (email.matches("^.+@.+\\..+$")){
 			++rules;
 		}
 		//2) TLD must only contain lower case letters
-		if (email.matches("^*.[a-z]$")){
+		if (email.matches("^.*\\.[a-z]+$")){
 			++rules;
 		}
 		return rules;
